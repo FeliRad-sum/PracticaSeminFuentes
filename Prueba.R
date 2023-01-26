@@ -12,3 +12,9 @@ mortalidad<-subset(mortalidad,Periodo<2021)
 colnames(mortalidad)[3]<-"provincia"
 colnames(mortalidad)[5]<-"num_muertes"
 colnames(renta_filt)[3]<-"renta"
+
+
+for (i in 1:length(mortalidad$provincia)){
+  mortalidad$provincia[i]<-sub('...','',mortalidad$provincia[i])
+}
+
