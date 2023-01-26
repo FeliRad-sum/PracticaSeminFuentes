@@ -1,3 +1,6 @@
+library(ggplot2)
+
+
 #Carga datos
 mortalidad<-read.csv("Input/mortalidad.csv",sep=";")
 renta<-read.csv("Input/renta.csv",sep=";")
@@ -29,3 +32,10 @@ muertes_renta<-subset(renta_mortalidad,Sexo=="Total")
 muertes_renta<-subset(muertes_renta,
 causa=="001-102  I-XXII.Todas las causas")
 muertes_renta_filt<-muertes_renta[,-c(3,4)]
+muertes_renta_filt<-subset(muertes_renta_filt,Periodo>2018)
+
+# Gráfico muerte_renta_filt
+
+plot(x=muertes_renta_filt$renta, 
+     y=muertes_renta_filt$num_muertes,col="blue")
+
