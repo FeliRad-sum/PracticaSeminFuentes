@@ -1,5 +1,4 @@
-#Mi primer script
+#Carga datos
+mortalidad<-read.csv("Input/mortalidad.csv",sep=";")
+renta<-read.csv("Input/renta.csv",sep=";")
 
-x<-c(1:100)
-y<-sin(x)
-plot(x,y)
