@@ -13,8 +13,15 @@ colnames(mortalidad)[3]<-"provincia"
 colnames(mortalidad)[5]<-"num_muertes"
 colnames(renta_filt)[3]<-"renta"
 
+#Igualar nombres columnas
 
 for (i in 1:length(mortalidad$provincia)){
   mortalidad$provincia[i]<-sub('...','',mortalidad$provincia[i])
 }
+#Juntar tablas
+
+renta_mortalidad<-merge(mortalidad,renta_filt,
+                        by=c("provincia","Periodo"))
+
+#Extraer información
 
