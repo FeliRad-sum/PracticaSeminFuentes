@@ -25,3 +25,7 @@ renta_mortalidad<-merge(mortalidad,renta_filt,
 
 #Extraer información
 
+muertes_renta<-subset(renta_mortalidad,Sexo=="Total")
+muertes_renta<-subset(muertes_renta,
+causa=="001-102  I-XXII.Todas las causas")
+muertes_renta_filt<-muertes_renta[,-c(3,4)]
