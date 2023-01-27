@@ -1,30 +1,49 @@
 ---
-title: "PracticaSeminFuentes"
+title: "<font size = 8>_PracticaSeminFuentes_</font>"
+subtitle: "<font size = 3> Repositorio: 
+[GitHub](https://github.com/FeliRad-sum/PracticaSeminFuentes) </font>"
 author: "Felicia Raducea"
 date: "2023-01-26"
-output: html_document
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 6
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## SEMINARIO FUENTES DE DATOS BIOMÉDICAS Y WEB SEMÁNTICA
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+   Los 2 DATA SET utilizados están descargados de la pagina del Instituto Nacional de Estadística.
+Uno es "Atlas de distribución de renta de los hogares" y el segundo "Estadística de defunciones según la causa de muerte".
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Los datos los he cargado en ".csv" con separador ";".
 
-```{r cars}
-summary(cars)
-```
 
-## Including Plots
+### Depuración
 
-You can also embed plots, for example:
+He modificado y simplificado algunos nombres de columnas y eliminado
+número de filas  reduciendo periodo de tiempo.
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+###Igualar nombres columnas
+
+Con un bucle "for",recorriendo la columna "provincia" de "mortalidad", se han eliminado los caracteres numéricos.
+
+
+###INNER Join
+
+Ahora sí se pueden juntar las tablas.
+
+### Gráficos muerte_renta_filt
+
+No he conseguido extraer mucha información dado que no pude utilizar ggplot
+
+![](http://127.0.0.1:50128/graphics/e3440396-695c-4b6c-ba81-63afbff5c3c9.png){width=400px}
+
+![](http://127.0.0.1:50128/graphics/fdfd0408-82f8-45ee-95de-f9fb96bd3c08.png){width=400px}
+
+![](http://127.0.0.1:50128/graphics/37e9ab68-602f-4b75-8940-842bcd7d80fd.png){width=400px}
